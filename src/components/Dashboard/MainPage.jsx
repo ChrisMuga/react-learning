@@ -1,11 +1,21 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { menuItems } from "./data"
 
 function MainPage(props) {
+	const [count, setCount] = useState(0)
+	function increase() {
+		setTimeout(() => {
+			setCount(count + 1)
+		}, 1000)
+	}
+
+	// call/initiate a function using useEffect() hook
+	useEffect(increase, [count])
+
 	return (
 		<div className="container-fluid">
 			{/* pass down value through props */}
-			<Title name="Dashboard" />
+			<Title name="Dashboard" count={count} />
 			<div className="row my-1">
 				<Menu title="Menu" items={menuItems} />
 			</div>
@@ -14,12 +24,14 @@ function MainPage(props) {
 }
 
 function Title(props) {
-	const { name } = props
+	const { name, count } = props
 	return (
 		<div className="row d-flex flex-column my-1">
 			<div className="align-self-center col-md-6">
 				<div className="alert alert-success">
 					<h1>{name}</h1>
+					<hr />
+					{count}
 				</div>
 			</div>
 		</div>

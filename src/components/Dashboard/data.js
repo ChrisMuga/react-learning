@@ -6,6 +6,10 @@ const menuItems = [
 	{
 		id: 2,
 		title: "Watch"
+	},
+	{
+		id: 3,
+		title: "High Order Components"
 	}
 ]
 
