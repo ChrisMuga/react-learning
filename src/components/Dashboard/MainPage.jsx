@@ -3,9 +3,11 @@ import { menuItems } from "./data"
 
 function MainPage(props) {
 	const [count, setCount] = useState(0)
+	const [time, setTime] = useState(0)
 	function increase() {
 		setTimeout(() => {
 			setCount(count + 1)
+			setTime(new Date().toLocaleTimeString())
 		}, 1000)
 	}
 
@@ -15,7 +17,7 @@ function MainPage(props) {
 	return (
 		<div className="container-fluid">
 			{/* pass down value through props */}
-			<Title name="Dashboard" count={count} />
+			<Title name="Dashboard" count={count} time={time} />
 			<div className="row my-1">
 				<Menu title="Menu" items={menuItems} />
 			</div>
@@ -24,7 +26,7 @@ function MainPage(props) {
 }
 
 function Title(props) {
-	const { name, count } = props
+	const { name, count, time } = props
 	return (
 		<div className="row d-flex flex-column my-1">
 			<div className="align-self-center col-md-6">
@@ -32,6 +34,8 @@ function Title(props) {
 					<h1>{name}</h1>
 					<hr />
 					{count}
+					<hr />
+					{time}
 				</div>
 			</div>
 		</div>

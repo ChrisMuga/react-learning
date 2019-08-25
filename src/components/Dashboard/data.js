@@ -1,5 +1,9 @@
 const menuItems = [
 	{
+		id: 0,
+		title: "Dashboard"
+	},
+	{
 		id: 1,
 		title: "Clock"
 	},
