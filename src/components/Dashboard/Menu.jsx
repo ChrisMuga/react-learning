@@ -6,7 +6,8 @@ function Menu(props) {
 		itemsOrNone = items.map((item, counter) => {
 			return (
 				<a href="/" className="list-group-item list-group-item-action" key={item.id}>
-					{counter + 1}-{item.title}
+					<b className="float-left">{counter + 1}</b>
+					<span className="float-right">{item.title}</span>
 				</a>
 			)
 		})
@@ -14,7 +15,7 @@ function Menu(props) {
 		itemsOrNone = <h1>Nothing Here</h1>
 	}
 	return (
-		<div className="col-md-4">
+		<div className="col-md-3">
 			<div className="list-group">
 				<div className="list-group-item active">{title}</div>
 				{itemsOrNone}
