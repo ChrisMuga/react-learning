@@ -6,12 +6,12 @@ function Users(props) {
 	if (users) {
 		usersList = users.map((user, index) => {
 			return (
-				<li class="list-group-item" key={user.id}>
+				<li className="list-group-item" key={user.id}>
 					{index + 1} <span className="ml-3">{user.name}</span>
 				</li>
 			)
 		})
-		usersList = <ul class="list-group">{usersList}</ul>
+		usersList = <ul className="list-group">{usersList}</ul>
 	} else {
 		usersList = <div className="badge badge-danger">No Data</div>
 	}
