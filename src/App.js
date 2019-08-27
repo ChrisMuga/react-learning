@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react"
 import "bootstrap/dist/css/bootstrap.css"
-import MainPage from './components/Dashboard/MainPage';
+import Index from "./pages/Index"
+
 function App() {
-  return (<MainPage />)
+	return (
+		<div className="container-fluid mt-3">
+			<Index />
+		</div>
+	)
 }
 
-export default App;
+export default App
