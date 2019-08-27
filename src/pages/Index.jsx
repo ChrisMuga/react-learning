@@ -1,6 +1,6 @@
 import React from "react"
 import Title from "./Title"
-import Users from "./Users"
+import UsersContainer from "./UsersContainer"
 function Index(props) {
 	return (
 		<div>
@@ -11,7 +11,7 @@ function Index(props) {
 			</div>
 			<div className="row">
 				<div className="col-md-6">
-					<Users />
+					<UsersContainer />
 				</div>
 			</div>
 		</div>
