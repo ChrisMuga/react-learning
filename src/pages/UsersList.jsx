@@ -1,6 +1,6 @@
 import React from "react"
 
-function Users(props) {
+function UsersList(props) {
 	const { users } = props
 	let usersList
 	if (users) {
@@ -25,4 +25,4 @@ function Users(props) {
 	)
 }
 
-export default Users
+export default UsersList

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Users from "./Users"
+import UsersList from "./UsersList"
 import fetch from "node-fetch"
 import API_ENDPOINTS from "./../config"
 
@@ -17,7 +17,7 @@ function UsersContainer(props) {
 	}, [])
 
 	if (users) {
-		return <Users users={users} />
+		return <UsersList users={users} />
 	} else {
 		return null
 	}

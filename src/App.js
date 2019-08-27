@@ -2,7 +2,7 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import Index from "./pages/Index"
-import UsersContainer from "./pages/UsersContainer"
+import UsersPage from "./pages/UsersPage"
 import Navbar from "./components/Navbar"
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
 		<Router>
 			<div className="container-fluid mt-3">
 				<Navbar />
-				<Index />
 			</div>
-			<Route path="/users" component={UsersContainer} />
+			<Route path="/users" component={UsersPage} />
+			<Route exact path="/" component={Index} />
 		</Router>
 	)
 }

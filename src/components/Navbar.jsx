@@ -1,11 +1,12 @@
 import React from "react"
+import { NavLink, Link } from "react-router-dom"
 function Navbar(props) {
 	return (
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="/">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+				<Link to="/" className="navbar-brand">
 					Navbar
-				</a>
+				</Link>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -20,24 +21,14 @@ function Navbar(props) {
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							<a class="nav-link" href="/">
+							<Link to="/" className="nav-link">
 								Home <span class="sr-only">(current)</span>
-							</a>
+							</Link>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/">
-								Features
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/">
-								Pricing
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">
-								Disabled
-							</a>
+							<Link to="/users" className="nav-link">
+								Users
+							</Link>
 						</li>
 					</ul>
 				</div>
